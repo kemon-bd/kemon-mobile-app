@@ -1,6 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
-void main() {
+import 'core/config/config.dart';
+
+FutureOr<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize all the configurations
+  await AppConfig.init();
+
   runApp(const MainApp());
 }
 
