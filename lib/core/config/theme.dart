@@ -2,7 +2,11 @@ part of 'config.dart';
 
 class LightTheme {
   static ThemeData get pallete {
-    return ThemeData.light();
+    return ThemeData.light(
+      useMaterial3: true,
+    ).copyWith(
+      primaryColor: const Color(0xFF53B95C),
+    );
   }
 }
 
